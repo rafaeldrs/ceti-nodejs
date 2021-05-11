@@ -5,5 +5,7 @@ const requestListener = function (req, res) {
   res.end('Hello, World!');
 }
 
+const port = process.env.PORT || 8080;
+
 const server = http.createServer(requestListener);
-server.listen(process.env.PORT);
+server.listen(port);
