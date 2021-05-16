@@ -1,0 +1,56 @@
+Respecto a portfolio
+
+Idea:
+- Crear un portfolio/currículum como web
+- Incluir un sobre ti, enlace a github, linkedin, infojobs...
+- Esa web personal se pasa a QR que se incluye en el currículum en papel
+- Así se demuestra que sabes de despliegue de servidores (heroku),
+CDN (cloudfront), dominio y dns, nodejs, html, js, css...
+
+Pasos:
+- Crear cuenta en heroku y crear una app
+- Crear una carpeta con un proyecto de nodejs simple
+- git init, git add ., git commit -m
+- sudo npm i -g heroku
+- heroku login -i
+- heroku git:remote -a ceti-nodejs
+- git push heroku master
+
+es posible que haya que configurar git por el camino
+es necesario incluir el npm start en el package.json
+es necesario poner el puerto como process.env.PORT
+si algo ha ido mal "heroku logs --tail"
+
+
+
+- Crear dominio
+- Montar el cloudflare
+- Crear el código QR
+- Crear el repositorio de github y que comprendan que hay distintos remotos
+- Que hagamos routing básico
+- Meter express
+- Una vez arriba: comprobar cookies y seguridad de la web
+- Meter materializeCSS para darle estilo
+
+
+
+- Intentar hacer despliegue usando contenedores
+
+
+https://github.com/topics/portfolio-template
+https://dev.to/rhuts/personal-website-for-any-developer-2n54
+https://dev.to/jcoelho/personal-website-template-an-open-source-project-5dgl
+https://dev.to/jameswallis/i-completely-rewrote-my-personal-website-using-dev-to-as-a-cms-2pje
+
+
+
+
+
+
+
+
+
+
+
+
+
