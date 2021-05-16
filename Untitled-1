@@ -1,0 +1,10 @@
+https://github.com/rafaeldrs/ceto-nodejs.git
+
+git init
+git add .
+git commit -m "Commit inicial"
+sudo npm i -g heroku
+heroku login -i
+heroku git:remote -a nombre_de_la_app
+git push heroku master
+

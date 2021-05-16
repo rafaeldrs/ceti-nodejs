@@ -1,14 +1,19 @@
-const http = require('http');
+'use strict';
 
-const requestListener = function (req, res) {
-  res.writeHead(200);
-  res.end('Hello, World!');
-}
+const express = require('express');
 
-const port = process.env.PORT || 8080;
+// Constants
+const PORT = 5000;
 
-const server = http.createServer(requestListener);
-server.listen(port);
+// App
+const app = express();
+app.get('/', (req, res) => {
+  res.send('Hello World');
+});
+
+app.listen(PORT);
+console.log(`Running on ${PORT}`);
+
 
 
 /*
