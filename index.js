@@ -7,6 +7,9 @@ const PORT = process.env.PORT || 5000;
 
 // App
 const app = express();
+
+app.use(express.static('views'));
+
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/views/' + 'index.html');
 });
