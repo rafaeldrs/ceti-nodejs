@@ -21,6 +21,20 @@ es necesario incluir el npm start en el package.json
 es necesario poner el puerto como process.env.PORT
 si algo ha ido mal "heroku logs --tail"
 
+Mejoremos el código usando el framework express
+- npm i express
+- Cambiar el archivo index.js para crear un servidor sencillo.
+
+Para demostrar más habilidades, el despliegue lo realizaremos con docker.
+Para ello:
+- Crear un Dockerfile que funcione en local
+    - docker build -t aplicacion .
+    - docker run --name aplicacion -p 5000:5000 -it -d aplicacion
+- Configurar heroku y hacer push:
+    - heroku login
+    - heroku container:login
+    - heroku container:push web -a nombre_app_heroku
+    - heroku container:release web -a nombre_app_heroku
 
 
 - Crear dominio
