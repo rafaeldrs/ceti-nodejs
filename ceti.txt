@@ -40,17 +40,19 @@ Para ello:
 - Crear dominio
 - Montar el cloudflare
 - Crear el código QR
-- Crear el repositorio de github y que comprendan que hay distintos remotos
+
+Para seguir el desarollo
+- npm i -D nodemon
+- Crear script para desarrollo
+- Crear carpeta views y meter dentro los html
+- Crear el repositorio de github y subir el código que tenemos
 - Que hagamos routing básico
-- Meter express
 - Una vez arriba: comprobar cookies y seguridad de la web
 - Meter materializeCSS para darle estilo
 
 
 
-- Intentar hacer despliegue usando contenedores
-
-
+Referencias web de cómo debería verse un buen portfolio
 https://github.com/topics/portfolio-template
 https://dev.to/rhuts/personal-website-for-any-developer-2n54
 https://dev.to/jcoelho/personal-website-template-an-open-source-project-5dgl
