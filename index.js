@@ -19,7 +19,7 @@ app.use((req, res, next) => {
 app.use(helmet.contentSecurityPolicy({
   useDefaults: true,
   directives: {
-    defaultSrc: ["'self'", "https://fonts.googleapis.com"],
+    defaultSrc: ["'self'", "https://fonts.googleapis.com", "https://use.typekit.net", "https://p.typekit.net"],
     "script-src": ["'self'", "https://code.jquery.com"],
     "style-src": null,
   }
@@ -35,31 +35,14 @@ app.use(helmet.permittedCrossDomainPolicies());
 app.use(helmet.referrerPolicy());
 app.use(cors())
 
-app.use(express.static('views'));
+app.use(express.static('dist'));
 
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/views/' + 'index.html');
+  res.sendFile(__dirname + '/dist/' + 'index.html');
 });
 
 
 app.listen(PORT, () => {
   console.log(`En el puerto: ${PORT}`);
 });
-
-
-
-/*
-const MongoClient = require('mongodb').MongoClient;
-
-const uri = "mongodb+srv://administrador:I5m4GR0rJdhBztMB@cluster0.cfb0j.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-
-
-client.connect(err => {
-    const collection = client.db("test").collection("devices");
-    // perform actions on the collection object
-    client.close();
-});
-*/
